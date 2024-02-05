@@ -1,5 +1,39 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #111;
+        color: #fff;
+        font-family: Arial, sans-serif;
+}
+header{
+	padding: 20px;
+	text-align: left;
+	text-transform: uppercase;
+}
+h1{
+	color: #fff; /* white color for "About" */
+}
+.bold-text{
+	font-weight: bold;
+}
+.yellow-text{
+	color: #ffcc00; /* yellow color for "Our Team" */
+}
+header p{
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+/* Media query for responsiveness */
+
+@media (max-width: 600px){
+	h1{
+		font-family: 24px;
+	}
+	header p{
+		font-family: 14px;
+	}
 }
