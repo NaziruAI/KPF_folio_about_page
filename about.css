@@ -24,18 +24,33 @@ body{
     flex-direction: row-reverse; /* Reverse the order for odd sections */
     justify-content: space-between; /* Align items with space between them */
     align-items: center; /* Align items vertically centered */
-    background-color: rgb(86, 72, 72);
-    padding: 40px 30px;
+    background-color: #223;
+    padding: 4% 3%;
 }
 
 /* Apply style for the whole content */
 .content{
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 10%;
+    padding: 0 5px;
+    margin: 0 0 0 8%;
     height: 300px;
     justify-content: space-between;
     font-weight: 900;
+    word-wrap: break-word;
+}
+
+/* For odd sections, image on the left */
+.member:nth-child(odd) .image {
+    order: 1;
+}
+
+.member:nth-child(odd) .content{
+    margin: 0 8% 0 0;
+}
+
+.member:nth-child(odd){
+    background-color: #011;
 }
 
 /* Style the image container */
@@ -45,7 +60,7 @@ body{
 
 /* Style the content container */
 .member .content {
-    flex: 0 0 40%; /* Take up 50% of the container width */
+    flex: 0 0 30%; /* Take up 50% of the container width */
 }
 
 /* Style the image inside the container */
@@ -81,18 +96,7 @@ h3 span{
     cursor: pointer; /* Set the cursor style */
 }
 
-/* For odd sections, image on the left */
-.member:nth-child(odd) .image {
-    order: 1;
-}
 
-.member:nth-child(odd) .content{
-    padding: 0 10%;
-}
-
-.member:nth-child(odd){
-    background-color: black;
-}
 
 
 /* Apply Media query for small screen  */
@@ -107,13 +111,13 @@ h3 span{
         
     }
     .member h3{
-        line-height: 30px;
+        line-height: 35px;
         margin-bottom: 26px;
     }
 
     .content{
-        height: %;
         padding: 10px 0;
+        margin: 0;
     }
 
     .icon{
@@ -130,7 +134,7 @@ h3 span{
     }
 
     .member:nth-child(odd) .content{
-        padding: 10px 0;
+        margin: 0;
     }
 }
 
@@ -141,6 +145,7 @@ h3 span{
         transform: translateY(-10deg);
     }
     to{
+        opacity: 1;
         transform: translateX(0deg);
     }
     
