@@ -11,130 +11,109 @@ body{
     animation: transitionIn 2s linear; 
 }
 
-/* Apply flexbox to the parent container */
-.inner.alt {
-    display: flex;
-    flex-direction: column;
-
-}
-
 /* Apply flex direction and justify content to align items */
-.member {
+.header {
+    height: 120vh;
     display: flex;
     flex-direction: row-reverse; /* Reverse the order for odd sections */
     justify-content: space-between; /* Align items with space between them */
     align-items: center; /* Align items vertically centered */
-    background-color: #223;
-    padding: 4% 3%;
+    /* background-color: #223; */
+    padding: 4% 2%;
 }
 
 /* Apply style for the whole content */
 .content{
+    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 5px;
-    margin: 0 0 0 8%;
-    height: 300px;
     justify-content: space-between;
     font-weight: 900;
     word-wrap: break-word;
 }
 
-/* For odd sections, image on the left */
-.member:nth-child(odd) .image {
-    order: 1;
-}
 
-.member:nth-child(odd) .content{
-    margin: 0 8% 0 0;
-}
-
-.member:nth-child(odd){
-    background-color: #011;
-}
 
 /* Style the image container */
-.member .image {
-    flex: 0 0 50%; /* Take up 50% of the container width */
+.header .image {
+    height: 100%;
+    background-color: gray;
+    flex: 1 0 50%; /* Take up 50% of the container width */
 }
 
 /* Style the content container */
-.member .content {
-    flex: 0 0 30%; /* Take up 50% of the container width */
+.header .content {
+    flex: 0 0 50%; /* Take up 50% of the container width */
 }
 
 /* Style the image inside the container */
-.member .image img {
+.header .image img {
+    height: 100%;
     max-width: 100%; /* Make sure the image doesn't exceed its container */
 }
 
 /* Add spacing and styling to improve readability */
-.member h3, .member p {
+.header h3, .header p {
     margin: 0;
 }
 
 /* h3 style */
-.member h3{
-    font-size: 3em;
+.header h3{
+    font-size: 6.4em;
     text-transform: uppercase; /* Capitalize the text */
     font-style: italic; /* Italicize the text */
-    line-height: 46px;
+    line-height: 100px;
+    margin: 50% 0 0 0;
 }
 /* span inside the h3 */
 h3 span{
     color: gold;
 }
-/* social media handle style */
-.icon{
-    margin-top: 40px;
+
+.content p{
+    margin: -15% 10% 0 0;
 }
 
-.icon > a{
-    margin: 25px;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit the color from the parent */
-    cursor: pointer; /* Set the cursor style */
+.content hr{
+    width: 100%;
+    color: #030202;
+    margin: 0 0 0 -5%;
+    
+    
 }
-
-
-
 
 /* Apply Media query for small screen  */
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 775px) {
     body{
         font-size: 12px;
     }
-    .member{
+    .header{
         flex-direction: column;
         margin: 0;
-        padding: 30px;
+        padding: 0 8%;
         
     }
-    .member h3{
-        line-height: 35px;
-        margin-bottom: 26px;
+    .header h3{
+        margin: 0;
+        font-size: 4.2em;
+        line-height: 55px;
+        margin-bottom: 56px;
+        background-color: gray;
+    }
+    .header p{
+        margin-top: 1%;
+        padding: 5px;
+        flex: 1;
+        background-color: gray;
+
     }
 
     .content{
         padding: 10px 0;
-        margin: 0;
-    }
-
-    .icon{
-        margin: 40px 0 60px 0;
-        font-size: 16px;
-    }
-
-    .icon > a{
-        margin: 2px;
-    }
-
-    .member:nth-child(odd) {
-        flex-direction: column-reverse;
-    }
-
-    .member:nth-child(odd) .content{
-        margin: 0;
+        /* margin: 0; */
+    }    
+    hr{
+        display: none;
     }
 }
 
