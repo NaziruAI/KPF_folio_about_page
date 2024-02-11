@@ -5,14 +5,13 @@ body{
     box-sizing: border-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #fff;
-    font-size: 16px;
     overflow-x: hidden; /* Prevent horizontal scrolling on smaller screens */
     animation: transitionIn 2s linear; 
 }
 
 /* Apply flex direction and justify content to align items */
-.header {
-    height: 120vh;
+.section1 {
+    height: 100vh;
     display: flex;
     flex-direction: row-reverse; /* Reverse the order for odd sections */
     justify-content: space-between; /* Align items with space between them */
@@ -31,38 +30,36 @@ body{
     word-wrap: break-word;
 }
 
-
-
 /* Style the image container */
-.header .image {
+.section1 .image {
     height: 100%;
     background-color: gray;
     flex: 1 0 50%; /* Take up 50% of the container width */
 }
 
 /* Style the content container */
-.header .content {
+.section1 .content {
     flex: 0 0 50%; /* Take up 50% of the container width */
 }
 
 /* Style the image inside the container */
-.header .image img {
+.section1 .image img {
     height: 100%;
     max-width: 100%; /* Make sure the image doesn't exceed its container */
 }
 
 /* Add spacing and styling to improve readability */
-.header h3, .header p {
+.section1 h3, .section1 p {
     margin: 0;
 }
 
 /* h3 style */
-.header h3{
+.section1 h3{
     font-size: 6.4em;
     text-transform: uppercase; /* Capitalize the text */
     font-style: italic; /* Italicize the text */
     line-height: 100px;
-    margin: 50% 0 0 0;
+    margin: 35% 0 0 0;
 }
 /* span inside the h3 */
 h3 span{
@@ -70,38 +67,35 @@ h3 span{
 }
 
 .content p{
-    margin: -15% 10% 0 0;
+    /* margin: -15% 10% 0 0; */
 }
 
 .content hr{
     width: 100%;
     color: #030202;
     margin: 0 0 0 -5%;
-    
-    
 }
 
 /* Apply Media query for small screen  */
 @media screen and (max-width: 775px) {
     body{
-        font-size: 12px;
+        font-size: 0.7rem;
     }
-    .header{
+    .section1{
         flex-direction: column;
         margin: 0;
-        padding: 0 8%;
+        padding: 0 6%;
         
     }
-    .header h3{
-        margin: 10% 0 0 0;
+    .section1 h3{
+        margin:  0;
         font-size: 4.2em;
-        line-height: 55px;
-        margin-bottom: 56px;
+        line-height: 3.3rem;
+        margin-bottom: 4rem;
     }
-    .header p{
-        /* margin: 0; */
-        padding: 15px;
+    .section1 p{
         flex: 1;
+        margin-top: -10%;
 
     }
 
