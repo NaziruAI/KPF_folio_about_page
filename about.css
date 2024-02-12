@@ -4,111 +4,129 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgb(36, 25, 25);
     color: #fff;
     overflow-x: hidden; /* Prevent horizontal scrolling on smaller screens */
     animation: transitionIn 2s linear; 
+}
+
+/* Apply flex direction and justify content to align items */
+.section1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order for odd sections */
+    justify-content: space-between; /* Align items with space between them */
+    align-items: center; /* Align items vertically centered */
+    background-color: #011;
+    padding: 4% 2%;
+}
+
+/* Style the image container */
+.section1 .image{
+    height: 100%;
+    flex: 1 0 50%; /* Take up 50% of the container width */
+}
+
+/* Style the content container */
+.section1 .content {
+    flex: 0 0 50%; /* Take up 50% of the container width */
+}
+
+/* Style the image inside the container */
+.section1 .image img {
+    height: 100%;
+    max-width: 100%; /* Make sure the image doesn't exceed its container */
+}
+
+/* Add spacing and styling to improve readability */
+.section1 h3, .section1 p {
+    margin: 0;
+}
+
+/* h3 style */
+.section1 h3{
+    font-size: 6.4em;
+    text-transform: uppercase; /* Capitalize the text */
+    font-style: italic; /* Italicize the text */
+    line-height: 100px;
+    margin: 35% 0 0 0;
 }
 
 /* Apply flexbox to the parent container */
 .section2{
     display: flex;
     flex-direction: column;
-
 }
 
-/* Apply flex direction and justify content to align items */
-.member {
+.section2 .member{
     display: flex;
-    flex-direction: row-reverse; /* Reverse the order for odd sections */
-    justify-content: space-between; /* Align items with space between them */
-    align-items: center; /* Align items vertically centered */
-    background-color: #223;
-    padding: 4% 3%;
+    flex-direction: row-reverse;
 }
+
+.section2 .member .image{
+    flex: 0 0 50%;
+}
+
+.section2 .member .image img{
+    max-width: 100%;
+}
+
 
 /* Apply style for the whole content */
-.member .content{
+.section2 .member .content{
     flex: 0 0 30%; /* Take up 50% of the container width */
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
-    padding: 0 5px;
-    margin: 0 0 0 8%;
-    height: 300px;
     justify-content: space-between;
     font-weight: 900;
     word-wrap: break-word;
 }
 
-/* For odd sections, image on the left */
-.member:nth-child(odd) .image {
-    order: 1;
-}
 
-.member:nth-child(odd) .content{
-    margin: 0 8% 0 0;
-}
-
-.member:nth-child(odd){
-    background-color: #011;
-}
-
-/* Style the image container */
-.member .image {
-    flex: 0 0 50%; /* Take up 50% of the container width */
-}
-
-
-/* Style the image inside the container */
-.member .image img {
-    max-width: 100%; /* Make sure the image doesn't exceed its container */
-}
-
-/* Add spacing and styling to improve readability */
-.member h3, .member p {
-    margin: 0;
-}
-
-/* h3 style */
-.member h3{
-    font-size: 3em;
-    text-transform: uppercase; /* Capitalize the text */
-    font-style: italic; /* Italicize the text */
-    line-height: 46px;
-}
 /* span inside the h3 */
 h3 span{
     color: gold;
 }
-/* social media handle style */
-.icon{
-    margin-top: 40px;
-}
 
-.icon > a{
-    margin: 25px;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit the color from the parent */
-    cursor: pointer; /* Set the cursor style */
-}
+/* .content p{
+    /* margin: -15% 10% 0 0; */
+} */
 
+.content hr{
+    width: 100%;
+    color: #030202;
+    margin: 0 0 0 -5%;
+}
 
 /* Apply Media query for small screen  */
 @media screen and (max-width: 775px) {
     body{
         font-size: 0.8rem;
     }
-    .member{
+    .section1{
         flex-direction: column;
         margin: 0;
         padding: 2rem 1.3rem;
-        
+    }
+
+    .section1 h3{
+        margin:  0;
+        font-size: 4.2em;
+        line-height: 3.3rem;
+        margin-bottom: 4rem;
+    }
+
+    .section1 p{
+        flex: 1;
+        margin-top: -10%;
+
     }
 
     .member .content{
         padding: 0.7rem 0;
         margin: 0;
     }
+
     .member h3{
         line-height: 2.3rem;
         margin-bottom: 1.6rem;
@@ -129,6 +147,10 @@ h3 span{
 
     .member:nth-child(odd) .content{
         margin: 0;
+    }    
+
+    hr{
+        display: none;
     }
 }
 
