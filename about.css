@@ -146,15 +146,96 @@ body{
     cursor: pointer; /* Set the cursor style */
 }
 
+/* SECTION THREE */
+
+/* Apply flex direction and justify content to align items */
+.section3 {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order for odd sections */
+    justify-content: space-between; /* Align items with space between them */
+    align-items: center; /* Align items vertically centered */
+    background-color: #011;
+    padding: 4% 3%;
+}
+
+/* Style the image container */
+.section3 .image {
+    flex: 0 0 50%; /* Take up 50% of the container width */
+}
+
+/* Style the image inside the container */
+.section3 .image img {
+    height: 80vh;
+    max-width: 100%; /* Make sure the image doesn't exceed its container */
+}
+
+/* Apply style for the whole content */
+.section3 .content{
+    flex: 0 0 50%; /* Take up 50% of the container width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    font-weight: bolder;
+}
+
+.inverted-quotes {
+    font-size: 3.2rem;
+    font-style: italic;
+    text-transform: uppercase;
+    margin: 8rem 0 0 0;
+ }
+
+.subscribe{
+    margin-top: 4rem;
+}
+
+.subscribe p{
+    font-size: 1.3rem;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    margin-top: 1.2rem;
+}
+
+.email input{
+    width: 80%;
+    padding: 1rem;
+    outline: 0;
+    border: 0;
+    margin-top: 0.3rem;
+    background-color: rgb(137, 141, 141);
+}
+
+button{
+    width: 20%;
+    margin-top: 1.2rem;
+    padding: 0.7rem;
+    outline: 0;
+    border: 0;
+    background-color: gold;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+/* Add spacing and styling to improve readability */
+.section3 h3, .section3 p {
+    margin: 0;
+}
+
+
 /* Apply Media query for small screen  */
 @media screen and (max-width: 775px) {
     body{
         font-size: 0.8rem;
     }
+    /* SECTION ONE */
     .section1{
         flex-direction: column;
         margin: 0;
-        padding: 2rem 1.3rem;
+        padding: 2rem 1.5rem 6rem ;
     }
 
     .section1 h3{
@@ -170,14 +251,22 @@ body{
 
     }
 
-    .section2 .member .content{
-        padding: 0.7rem 0;
-        margin: 0;
-    }
     .section1 .content{
         padding: 1.3rem 0;
         margin: 0;
     }
+
+    .line{
+        display: none;
+    }
+
+    /* SECTION TWO */
+
+    .section2 .member .content{
+        padding: 0.7rem 0;
+        margin: 0;
+    }
+    
 
     .section2 .member h3{
         line-height: 2.3rem;
@@ -194,7 +283,7 @@ body{
     }
     .section2 .member{
         flex-direction: column;
-        padding: 2rem 1.3rem;
+        padding: 2rem 1.5rem;
     }
 
     .member:nth-child(odd) {
@@ -205,9 +294,33 @@ body{
         margin: 0;
     }    
 
-    .line{
-        display: none;
-    }
+/* SECTIN THREE */
+
+.section3{
+    flex-direction: column;
+    margin: 0;
+    padding: 2rem 1.5rem;
+
+}
+
+.section3 .inverted-quotes {
+    font-size: 2em;
+    margin-top: 1rem;
+  }
+
+  .section3 .subscribe p{
+    margin: -1.5rem 0 0 0;
+    font-weight: 500;
+  }
+  
+  .section3 .email input{
+    width: 90%;
+    margin-top: -0.5px;
+  }
+  .section3 button{
+    width: 30%;
+  }
+   
 }
 
 /* Animation for the page body */
